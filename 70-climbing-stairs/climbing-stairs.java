@@ -13,12 +13,12 @@ class Solution {
     int f(int i,int []dp){
         if(i==1 || i==2) {
          dp[i]=i;
-            return i;
+         return i;
         }
-        if(dp[i]!=-1) return dp[i];
+        if(dp[i]!=-1) return dp[i];//check if f(i) is already calculated
         int one =f(i-1,dp);
         int two = f(i-2,dp);
-        dp[i]=one + two;
+        dp[i]=one + two;//store beofre return 
         return dp[i];
     }
     public int climbStairs(int n) {
