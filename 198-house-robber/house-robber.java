@@ -1,11 +1,11 @@
 class Solution {
     int f(int i,int []nums,int []dp){
         if(i<0)return 0;
-        if(i==0) return dp[0]=nums[0];
-        if(dp[i]!=-1)return dp[i];
+        if(i==0) return dp[0]=nums[0];//if i had  only one house you have to rob that house 
+        if(dp[i]!=-1)return dp[i];//check if it is already calculated 
         int not_pick=0+f(i-1,nums,dp);
         int pick=nums[i]+f(i-2,nums,dp);//we have to skip the adjacent index so we use i-2;
-        return dp[i]=Math.max(pick,not_pick);
+        return dp[i]=Math.max(pick,not_pick);//we have to return max profit
     }
     public int rob(int[] nums) {
         int n=nums.length;
