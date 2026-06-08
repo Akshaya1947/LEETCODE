@@ -11,7 +11,7 @@ class Solution {
         int n=nums.length;
         int []dp=new int[n];
         Arrays.fill(dp,-1);
-        int ans=f(n-1,nums,dp);
+        int ans=f(n-1,nums,dp);//last la irutnhu start aagum
         return ans;
     }
 }
