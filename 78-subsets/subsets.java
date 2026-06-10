@@ -9,7 +9,7 @@ class Solution {
         //pick
         temp.add(nums[i]);
         f(i+1,temp,nums,ans);
-        temp.remove(temp.size()-1);
+        temp.remove(temp.size()-1);//backtrack panum bothu last element element ah remove panrathuku
     }
     public List<List<Integer>> subsets(int[] nums) {
              List<List<Integer>>ans =new ArrayList<>();
