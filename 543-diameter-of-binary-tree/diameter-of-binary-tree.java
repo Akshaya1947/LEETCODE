@@ -20,8 +20,8 @@ class Solution {
        int lh= f(root.left);
         int rh=f(root.right);
         int d=lh+rh;
-        c=Math.max(c,d);
-        return 1+Math.max(lh,rh);
+        c=Math.max(c,d);//whenever the diameter is high update in c and return
+        return 1+Math.max(lh,rh);//this will return height because that will indicate that there is anode in left or right side 
 
 
     }
