@@ -16,6 +16,7 @@
 class Solution {
         int c=0;
     int f(TreeNode root){
+        //number of edges between them is the length.
         if(root==null)return 0;
        int lh= f(root.left);
         int rh=f(root.right);
