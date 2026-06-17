@@ -22,8 +22,8 @@ class Solution {
         int i=0;
         while(!q.isEmpty()){
             int node =q.poll();
-           ans[i]=node;
-            i++;
+           ans[i]=node;//i=n-1 i++ means i==n which means array filled so return tha answer or else return the empty array
+            i++;//
             //check the adjacent connections
             for(int a: adj.get(node)){
                 indegree[a]--;
@@ -33,6 +33,6 @@ class Solution {
 
             }
         }
-        return i==n? ans: new int[0];
+        return i==n? ans: new int[0];//if it is valid return tha ans or else return the empty arry which you cannot take any course
     }
 }
