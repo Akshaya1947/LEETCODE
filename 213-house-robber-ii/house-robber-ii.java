@@ -18,7 +18,7 @@ class Solution {
         for(int i=1;i<n;i++){//the index is one so i create a new array to store the value form index 0
             arr[i-1]=nums[i];
         }
-        int b=f(n-2,arr,dp);
+        int b=f(n-2,arr,dp);//ipo array oda size 6 nu iruku na first element ah vitutan apo 5 tha length but enaku last element vanthu 4 so i have to pass n-2
         return Math.max(a,b);
     }
 }
