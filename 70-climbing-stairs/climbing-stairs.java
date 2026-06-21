@@ -11,20 +11,17 @@ class Solution {
     //   }
     //   return arr[n];
     int f(int i,int []dp){
-        if(i==1 || i==2) {
-         dp[i]=i;
-         return i;
-        }
-        if(dp[i]!=-1) return dp[i];//check if f(i) is already calculated
-        int one =f(i-1,dp);
+        if(i==1 || i==2)
+        return dp[i]=i;
+        if(dp[i]!=-1)return dp[i];
+        int one=f(i-1,dp);
         int two = f(i-2,dp);
-        dp[i]=one + two;//store beofre return 
-        return dp[i];
-    }
+        return dp[i]=one + two;
+            }
     public int climbStairs(int n) {
-        int [] dp=new int[n+1];
-        Arrays.fill(dp,-1);
-        int ans=f(n,dp);
-        return ans;
+      int []dp = new int[n+1];
+      Arrays.fill(dp,-1);
+      int ans=f(n,dp);
+      return ans;
     }
 }
